@@ -1,0 +1,74 @@
+Overriding config with config/out_layers3_heads4.py:
+
+out_dir = 'out_layers3_heads4'
+eval_interval = 250
+eval_iters = 20
+log_interval = 50
+
+always_save_checkpoint = True
+
+wandb_log = False
+wandb_project = 'shakespeare-char'
+wandb_run_name = 'out_layers3_heads4'
+
+dataset = 'shakespeare_char'
+gradient_accumulation_steps = 1
+batch_size = 64
+block_size = 128
+
+n_layer = 3
+n_head = 4
+n_embd = 128
+
+dropout = 0.0
+bias = False
+
+learning_rate = 1e-3
+max_iters = 1000
+lr_decay_iters = 1000
+min_lr = 1e-4
+beta2 = 0.99
+
+warmup_iters = 100
+
+device = 'cuda'
+dtype = 'float16'
+compile = False
+
+tokens per iteration will be: 8,192
+found vocab_size = 65 (inside data/shakespeare_char/meta.pkl)
+Initializing a new model from scratch
+number of parameters: 0.60M
+num decayed parameter tensors: 14, with 614,528 parameters
+num non-decayed parameter tensors: 7, with 896 parameters
+using fused AdamW: True
+step 0: train loss 4.2227, val loss 4.2169
+iter 0: loss 4.2239, time 575.83ms, mfu -100.00%
+iter 50: loss 2.8444, time 9.23ms, mfu 1.19%
+iter 100: loss 2.4959, time 8.90ms, mfu 1.20%
+iter 150: loss 2.4300, time 9.01ms, mfu 1.20%
+iter 200: loss 2.3314, time 8.91ms, mfu 1.20%
+step 250: train loss 2.2951, val loss 2.3137
+saving checkpoint to out_layers3_heads4
+iter 250: loss 2.2885, time 211.17ms, mfu 1.09%
+iter 300: loss 2.2345, time 10.15ms, mfu 1.09%
+iter 350: loss 2.1742, time 9.13ms, mfu 1.10%
+iter 400: loss 2.0885, time 9.06ms, mfu 1.11%
+iter 450: loss 1.9891, time 9.54ms, mfu 1.11%
+step 500: train loss 1.9422, val loss 2.0232
+saving checkpoint to out_layers3_heads4
+iter 500: loss 1.9632, time 237.59ms, mfu 1.01%
+iter 550: loss 1.8979, time 9.00ms, mfu 1.03%
+iter 600: loss 1.8725, time 11.81ms, mfu 1.02%
+iter 650: loss 1.8453, time 11.71ms, mfu 1.01%
+iter 700: loss 1.8186, time 20.85ms, mfu 0.96%
+step 750: train loss 1.7620, val loss 1.9100
+saving checkpoint to out_layers3_heads4
+iter 750: loss 1.7201, time 224.83ms, mfu 0.87%
+iter 800: loss 1.7535, time 9.01ms, mfu 0.91%
+iter 850: loss 1.6994, time 8.87ms, mfu 0.94%
+iter 900: loss 1.7199, time 10.66ms, mfu 0.95%
+iter 950: loss 1.7280, time 9.10ms, mfu 0.97%
+step 1000: train loss 1.6877, val loss 1.8454
+saving checkpoint to out_layers3_heads4
+iter 1000: loss 1.7273, time 211.21ms, mfu 0.88%

@@ -1,0 +1,73 @@
+Overriding config with config/train_code_generation.py:
+out_dir = 'out-code-generation'
+eval_interval = 250
+eval_iters = 20
+log_interval = 50
+
+always_save_checkpoint = True
+
+wandb_log = False
+wandb_project = 'code-generation'
+wandb_run_name = 'mini-gpt-code'
+
+dataset = 'code_generation'
+gradient_accumulation_steps = 1
+batch_size = 64
+block_size = 128
+
+n_layer = 4
+n_head = 4
+n_embd = 128
+
+dropout = 0.0
+bias = False
+
+learning_rate = 1e-3
+max_iters = 1000
+lr_decay_iters = 1000
+min_lr = 1e-4
+beta2 = 0.99
+
+warmup_iters = 100
+
+device = 'cuda'
+dtype = 'float16'
+compile = False
+
+tokens per iteration will be: 8,192
+found vocab_size = 170 (inside data/code_generation/meta.pkl)
+Initializing a new model from scratch
+number of parameters: 0.81M
+num decayed parameter tensors: 18, with 824,576 parameters
+num non-decayed parameter tensors: 9, with 1,152 parameters
+using fused AdamW: True
+step 0: train loss 4.9672, val loss 4.9666
+iter 0: loss 4.9642, time 614.76ms, mfu -100.00%
+iter 50: loss 3.0677, time 10.97ms, mfu 1.35%
+iter 100: loss 2.5998, time 10.78ms, mfu 1.35%
+iter 150: loss 2.3814, time 10.52ms, mfu 1.36%
+iter 200: loss 2.3090, time 10.60ms, mfu 1.36%
+step 250: train loss 2.0575, val loss 2.1850
+saving checkpoint to out-code-generation
+iter 250: loss 2.0278, time 259.33ms, mfu 1.23%
+iter 300: loss 1.9221, time 10.59ms, mfu 1.25%
+iter 350: loss 1.8101, time 10.70ms, mfu 1.26%
+iter 400: loss 1.6977, time 10.59ms, mfu 1.28%
+iter 450: loss 1.4876, time 10.68ms, mfu 1.29%
+step 500: train loss 1.4915, val loss 1.6807
+saving checkpoint to out-code-generation
+iter 500: loss 1.5051, time 267.32ms, mfu 1.16%
+iter 550: loss 1.4645, time 11.07ms, mfu 1.18%
+iter 600: loss 1.4311, time 16.34ms, mfu 1.15%
+iter 650: loss 1.3966, time 13.69ms, mfu 1.15%
+iter 700: loss 1.3002, time 19.05ms, mfu 1.11%
+step 750: train loss 1.2726, val loss 1.4989
+saving checkpoint to out-code-generation
+iter 750: loss 1.2044, time 256.74ms, mfu 1.00%
+iter 800: loss 1.1556, time 10.64ms, mfu 1.04%
+iter 850: loss 1.2295, time 11.08ms, mfu 1.07%
+iter 900: loss 1.1548, time 10.96ms, mfu 1.10%
+iter 950: loss 1.1834, time 10.74ms, mfu 1.13%
+step 1000: train loss 1.1733, val loss 1.4234
+saving checkpoint to out-code-generation
+iter 1000: loss 1.1717, time 262.26ms, mfu 1.02%
