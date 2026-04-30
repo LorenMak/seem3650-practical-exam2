@@ -45,7 +45,7 @@ The corresponding figure is saved as `figures/loss_vs_layers.png`.
 
 Since 355 mod 2 = 1, I used Python open-source code for the code generation dataset.
 
-The number of tokens in my code generation dataset is: 2540758.
+The number of tokens in my code generation dataset is: 12,646,798..
 
 I trained the code generation model for 1000 iterations using a reduced configuration on Google Colab.
 
